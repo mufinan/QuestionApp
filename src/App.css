@@ -1,0 +1,253 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border: 2px solid #84944e;
+  height: 90vh;
+  width: 90vh;
+  border-radius: 20px;
+  background-color: white ;
+  overflow: auto;
+}
+.options-head{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.question-header {
+  height: 100px;
+  border-bottom: 1px solid #B5C18E;
+  border-top: 1px solid #B5C18E;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-number{
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #84944e;
+  border: 1px solid rgb(222, 223, 222);
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+
+
+}
+.options-btn{
+  margin-top: 1rem;
+  width: 150px;
+  height: 90px;
+  padding: 10px;
+  font-size: 14px;
+}
+.text{
+  font-size: 20px;
+  color: #534e48;
+}
+.image{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: -10px;
+}
+.options-btn{
+  background-color: #EADBC8;
+  color: rgb(29, 40, 38);
+  border: 1px solid #B5C18E;
+}
+body{
+  background-color: #F1F1F1;
+ 
+}
+.results{
+  display: flex;
+  gap: 15 px;
+}
+.start-image{
+  width: 250px;
+ 
+}
+.start-page {
+  background-image: url('frame-6620372_1280.png'); /* Arka plan resmi ekle */
+  background-color: #f5f5dc; /* Resim yerine arka plan rengi */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.start-page-body{
+  margin-top: rem;
+}
+
+.rules-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  width: 450px;
+  margin-left: 55px;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: rgb(131, 33, 33);
+  margin-bottom: 2rem;
+}
+.start {
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.start:hover {
+    background-color: #45a049; /* Hover rengi */
+}
+.header-content{
+  display: flex;
+  
+}
+
+.countdown{
+  width: 60px;
+
+  display: flex;
+  margin-left: 13rem;
+  margin-top: 0.5rem;
+}
+
+.end-page{
+  border: 1px solid black;
+  width: 400px;
+  border-radius: 20px;
+}
+
+.finish-btn{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.results{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 2rem;
+  margin-left: 3rem;
+  width: 250px;
+}
+.result-li{
+  display: flex;
+  width: 100px;
+  height: 50px;
+
+}
+.keywords-li{
+  display: flex;
+  width: 160px;
+  height: 50px;
+  overflow: auto ;
+  text-align: start;
+}
+.keywords-settings{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.results-settings{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.end-page-li{
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: #cfbf98;
+  border-radius: 16px;
+  margin: 1px;
+  padding: 0.5rem;
+  
+  
+}
+.end-page-background{
+  background-color: #93c597;
+  border-radius: 20px;
+}
+
+.minlength{
+ background-color: antiquewhite;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 3rem;
+ border: 1px solid #93c597;
+}
+
+@media screen and (min-height: 721px){
+  .rules-list{
+    margin-left: 10rem;
+  }
+  .start-page-body{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .start-page-body-1{
+    margin-bottom: 1rem;
+  }
+}
