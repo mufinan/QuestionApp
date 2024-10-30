@@ -7,7 +7,7 @@
 - **Rules Page:** Displays game rules and a "Start Quiz" button.
 - **Questions:** Answer each question within 30 seconds.
 - **Delayed Options:** Options appear 4 seconds after the question is shown.
-- **End Page:**  View your answers and score summary, including commentary from İlber Ortaylı.
+- **End Page:**  View your answers and score summary.
 
 ## Technologies Used
 
@@ -18,7 +18,7 @@
 
 ## Live Site
 
-You can access the live website [here](https://dulcet-gaufre-7dbcf0.netlify.app/).
+You can access the live website [here](https://mufinan-question-app.netlify.app/).
 
 
 ## How To Use
@@ -27,10 +27,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com/) and [
 
 ```
 # Clone this repository
-$ git clone https://github.com/mufinan/Question_App
-
-# Go into the repository
-$ cd Star-Wars-Ships
+$ git clone https://github.com/mufinan/QuestionApp
 
 # Install dependencies
 $ npm install
