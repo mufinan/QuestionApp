@@ -180,8 +180,8 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: start;
-  gap: 2rem;
-  margin-left: 3rem;
+  gap: 1rem;
+  margin-left: 2rem;
   width: 250px;
 }
 .result-li{
@@ -192,7 +192,7 @@ body{
 }
 .keywords-li{
   display: flex;
-  width: 160px;
+  width: 70px;
   height: 50px;
   overflow: auto ;
   text-align: start;
@@ -200,14 +200,27 @@ body{
 .keywords-settings{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  
+}
+.correct-answers-li{
+  display: flex;
+  width: 160px;
+  height: 50px;
+  overflow: auto ;
+  text-align: start;
+}
+.correct-answers-settings{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   
 }
 
 .results-settings{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   
 }
 .end-page-li{

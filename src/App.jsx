@@ -16,9 +16,11 @@ function App() {
    const [resultQuestion , setResultQuestion] = useState(false)
    const [currentQuestion] = useState(0);
    const [timer, setTimer] = useState(30);   
-   const [keywords ,setKeywords] = useState([])
+   const [keywords ,setKeywords] = useState([]);
+   const [correctAnswers ,setCorrectAnswers] = useState([]);
    const [correct, setCorrect ] = useState(0);
    const [wrong , setWrong ] = useState(0);
+   const [empty, setEmpty ] = useState(0);
    const [questionNumber , setQuestionNumber] = useState(1);
    const [startPage , setStartPage ] = useState(false)
   
@@ -27,6 +29,7 @@ function App() {
 const handleClick = (e)=>{
   const selectedOption = e.target.value 
   console.log(selectedOption)
+
   if(answer === selectedOption ){
     const truer = 'Doğru'
     result.push(truer)
@@ -35,14 +38,11 @@ const handleClick = (e)=>{
     setIndex(index + 1)
     setQuestionNumber((prev)=>prev + 1)
     setTimer(30)
-    keywords.push(selectedOption)
+    keywords.push((index + 1) + ". Soru : ")
     setKeywords([...keywords])
+    correctAnswers.push(answer)
+    setCorrectAnswers([...correctAnswers])
   
-    
-    
-   
-    
-    
   }else{
     const falser = 'Yanlış'
     result.push(falser)
@@ -51,15 +51,12 @@ const handleClick = (e)=>{
     setTimer(30)
     setQuestionNumber((prev)=>prev + 1)
     setWrong((prev)=> prev + 1 )
-    keywords.push(selectedOption)
+    keywords.push((index + 1) + ". Soru : ")
     setKeywords([...keywords])
+    correctAnswers.push(answer)
+    setCorrectAnswers([...correctAnswers])
    
-    
-    
-    
-  }
- 
-  
+  }  
 }
 
 useEffect(()=>{
@@ -71,12 +68,20 @@ useEffect(()=>{
     setQuestion(data[index].question);
     setMedia(data[index].media);
     setOptions(data[index].options)
- 
 
     const interval = setInterval(() => {
       if (timer > 0) {
         setTimer(timer - 1);
       } else {
+        
+        const emptier = 'Boş'
+        result.push(emptier)
+        setResult([...result])
+        setEmpty((prev)=>prev + 1)
+        keywords.push((index + 1) + ". Soru : ")
+        setKeywords([...keywords])
+        correctAnswers.push(answer)
+        setCorrectAnswers([...correctAnswers])
         
         setIndex(index + 1)
         setTimer(30)
@@ -90,16 +95,11 @@ useEffect(()=>{
       }else if( timer <= 26){
         setResultQuestion(true)
       }
-    
   
-  
-    
     return () =>{
       clearInterval(interval);
       
     }
-       
-    
     
   }
 },[index,timer, currentQuestion, startPage])
@@ -190,6 +190,8 @@ const refreshPage = () => {
           <br />
           <span style={{fontFamily:'cursive' , color:'white'}}>Yanlış Sayısı : {wrong}</span>
           <br />
+          <span style={{fontFamily:'cursive' , color:'white'}}>Boş Sayısı : {empty}</span>
+          <br />
           <span style={{fontFamily:'cursive' , color:'white'}}>Puanınız :  {correct*10} </span>
           </div>
           <div style={{marginTop:'1rem'}}>
@@ -200,6 +202,13 @@ const refreshPage = () => {
             {
               keywords.map((item,index)=>(
                 <li className='keywords-li' key={index}> {item} </li>
+              ))
+            }
+          </div>
+          <div className='correct-answers-settings' >
+            {
+              correctAnswers.map((item,index)=>(
+                <li className='correct-answers-li' key={index}> {item} </li>
               ))
             }
           </div>
